@@ -1,0 +1,43 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "course",
+            "otherEntityName": "course",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "studentId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "age",
+            "fieldType": "Long"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "emailAdd",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "phoneNumber",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160216191013",
+    "dto": "no",
+    "service": "no",
+    "pagination": "no"
+}

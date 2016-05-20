@@ -1,0 +1,38 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "student",
+            "otherEntityName": "student",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "courseId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "cost",
+            "fieldType": "Double"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "courseName",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "internet",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160216190003",
+    "dto": "no",
+    "service": "no",
+    "pagination": "no"
+}
