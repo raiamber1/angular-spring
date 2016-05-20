@@ -1,0 +1,64 @@
+
+<div>
+    <h2><span translate="newspringangularApp.course.detail.title">Courses</span> {{course.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="newspringangularApp.course.courseId">CourseId</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{course.courseId}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="newspringangularApp.course.cost">Cost</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{course.cost}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="newspringangularApp.course.courseName">CourseName</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{course.courseName}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="newspringangularApp.course.internet">Internet</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{course.internet}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="newspringangularApp.course.student">student</span>
+                </td>
+                <td>
+                    <span ng-repeat="student in course.students">
+                        <a class="form-control-static" ui-sref="student.detail({id: {{student.id}}})">{{student.id}}</a>{{$last ? '' : ', '}}
+                    </span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,60 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myStudentLabel" translate="newspringangularApp.student.home.createOrEditLabel">Create or edit a Student</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="student.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="newspringangularApp.student.studentId" for="field_studentId">StudentId</label>
+            <input type="number" class="form-control" name="studentId" id="field_studentId"
+                    ng-model="student.studentId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="newspringangularApp.student.age" for="field_age">Age</label>
+            <input type="number" class="form-control" name="age" id="field_age"
+                    ng-model="student.age"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="newspringangularApp.student.emailAdd" for="field_emailAdd">EmailAdd</label>
+            <input type="text" class="form-control" name="emailAdd" id="field_emailAdd"
+                    ng-model="student.emailAdd"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="newspringangularApp.student.phoneNumber" for="field_phoneNumber">PhoneNumber</label>
+            <input type="number" class="form-control" name="phoneNumber" id="field_phoneNumber"
+                    ng-model="student.phoneNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="newspringangularApp.student.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="student.name"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="newspringangularApp.student.course" for="field_course">course</label>
+            <select class="form-control" id="field_course" multiple name="course" ng-model="student.courses" ng-options="course as course.id for course in courses track by course.id"></select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>
